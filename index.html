@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dice Game</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="index.css">
+
+    </head>
+
+    <body>
+
+        <div class="start_container">
+            <h1 id="title">&#9860 DICE GAME &#9858</h1>
+            <button class="btn" id="new_game_start">New Game</button>
+            <button class="btn" id="rules">Rules</button>
+            <footer id="footer">Bruno Closs</footer>
+        </div>
+
+        <div class="rules hidden">
+            <p id="close">ⓧ</p>
+            <p id="rules_title">Rules:</p>
+            <p id="text_rules">Each turn, a player repeatedly rolls a die until
+                either a 1 is rolled or the player decides to "hold":<br><br>
+                - If the player rolls a 1, they score nothing and it becomes the next player's turn.<br>
+                - If the player rolls any other number, it is added to their turn total and the player's turn continues.<br>
+                - If a player chooses to "hold", their turn total is added to their score, and it becomes the next player's turn.<br>
+                - The first player to score 50 or more points wins.</p>
+            </p>
+        </div>
+
+        <div class="container hidden">
+
+            <section class="panel player0 active">
+
+                <h3 class="label_wins" id="label_wins1">WINS: <span
+                        class="total_wins total_wins0">0</span></h3>
+                <h1 class="name" id="name1">PLAYER 1</h1>
+                <h1 class="score" id="score0">0</h1>
+                <div class="current">
+                    <h2 class="currentLabel">CURRENT</h2>
+                    <p class="currentScore" id="current0">0</p>
+                </div>
+
+            </section>
+
+            <button class="btn" id="newBtn"><span id="symbol">↺</span> NEW GAME</button>
+            <!-- <img src="./dices/dice-6.png" alt="dice_image" class="dice" id="dice"> -->
+            <h1 class="dice" id="dice">&#9856</h1>
+            <button class="btn" id="roll"><span id="symbol">⚅ </span>ROLL DICE</button>
+            <button class="btn" id="hold"><span id="symbol">≚ </span>HOLD</button>
+
+            <section class="panel player1">
+
+                <h3 class="label_wins" id="label_wins2">WINS: <span
+                        class="total_wins total_wins1">0</span></h3>
+                <h1 class="name" id="name2">PLAYER 2</h1>
+                <h1 class="score" id="score1">0</h1>
+                <div class="current">
+                    <h2 class="currentLabel">CURRENT</h2>
+                    <p class="currentScore" id="current1">0</p>
+                </div>
+
+            </section>
+        </div>
+
+        <script src="index.js"></script>
+    </body>
+</html>
